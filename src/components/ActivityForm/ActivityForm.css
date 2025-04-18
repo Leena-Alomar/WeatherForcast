@@ -1,0 +1,47 @@
+.activity-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  
+}
+
+.activity-form input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: rgb(158, 112, 112);
+ height: 15px;
+}
+.activity-form input::placeholder {
+  color: white;
+}
+
+.activity-form button {
+  padding: 8px 12px;
+  background-color: #7c6497;
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 30px;
+}
+
+.activity-form button:hover {
+  background-color: #5f385c;
+}
+
+.activity-form input:focus,
+.activity-form button:focus {
+  outline: 2px solid #5f385c;
+  outline-offset: 2px;
+}
+
+@media (max-width: 500px) {
+  .activity-form {
+    flex-direction: column;
+  }
+
+}

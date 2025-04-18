@@ -1,0 +1,28 @@
+.weather-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);        
+  -webkit-backdrop-filter: blur(4px); 
+  border-radius: 10px;
+  padding: 16px;
+  width: 120px;
+  height: 200px;
+  text-align: center;
+  align-items: flex-start;
+
+}
+
+.des{
+  font-size: 13px;
+  font-weight: 550;
+  margin-top: 5px;
+  color: rgb(56, 53, 55);
+}
+.weather-card h3 {
+  margin-bottom: 10px;
+  color: #afafaf;
+  font-family: fantasy;
+}
+
+.weather-card img {
+  margin: 10px 0;
+}

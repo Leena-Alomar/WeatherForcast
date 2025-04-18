@@ -1,0 +1,179 @@
+// import './App.css'
+// import { useState } from 'react';
+// function App() {
+//   const [isShown, setIsShown] = useState(false);
+//   // const [colorMode, setColorMode] = useState("neon");
+//   const [WeatherData, seWeather] = useState( [
+//     {id: "1",condition: "Sunny",temp: "35",},
+//     {id: "2",condition: "Rainy",temp: "19",},
+//     {id: "3",condition: "Sunny",temp: "30",},
+//   ]);
+
+//   function handleShown(evt) {
+//     setIsShown(true)
+//   }
+  
+//   function handleHiddn(evt) {
+//     setIsShown(false)
+//   }
+
+//   function addWeather() {
+//     const newWeather = {id: "4",condition: "Rainy",temp: "21"}
+//     setWeather([...Weather, newWeather])
+//   }
+
+//   function updateWeather(id, condition) {
+//     console.log("update Weather")
+//     const updatedWeather = Weather.map((w) => {
+//       if (w.id === id) {
+//         const updatedObject = { ...w }
+//         updatedObject.condition = condition;
+//         return w
+//       }
+
+//       return w
+//     })
+//     setWeather(updatedWeather)
+//   }
+
+//   function deleteWeather(id) {
+//     const filteredWeather = Weather.filter(w => w.id !== id)
+//     setWeather(filteredWeather)
+//   }
+//   return (
+//     <div>
+//       <main>
+//         <h1>Welcome to Weatherforecast</h1>
+//       </main>
+//       <h2>Our Weather</h2>
+//       <ul>
+ 
+//       </ul>
+//       <div>
+//         <button onClick={() => setColorMode("night")}>Show</button>
+//         <button onClick={addWeather}>Add Weather</button>
+//         <button onClick={() => updateWeather(2, "Sunny")}>Update Weather</button>
+//         <button onClick={() => deleteWeather(3)}>Delete Weather</button>
+//       </div>
+//     </div>
+//   )
+// }
+// export default App
+// frggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+
+// import './App.css';
+// import { useState } from 'react';
+// import WeatherForecast from './components/WeatherForecast/WeatherForecast';
+// import ActivityForm from './components/ActivityForm/ActivityForm';
+
+// function App() {
+//   const [weatherData, setWeatherData] = useState([
+//     {
+//       id: "1",
+//       day: 'Mon',
+//       img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/day.svg',
+//       imgAlt: 'sun icon',
+//       condition: 'sunny',
+//       time: 'Morning',
+//     },
+//     {
+//       id: "2",
+//       day: 'Tue',
+//       img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/night.svg',
+//       imgAlt: 'moon icon',
+//       condition: 'clear',
+//       time: 'Night',
+//     },
+//     {
+//       id: "3",
+//       day: 'Wed',
+//       img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/stormy.svg',
+//       imgAlt: 'clouds with lightning icon',
+//       condition: 'stormy',
+//       time: 'All Day',
+//     },
+//     {
+//       id: "4",
+//       day: 'Thu',
+//       img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/cloudy-day.svg',
+//       imgAlt: 'sun overcast by clouds icon',
+//       condition: 'overcast',
+//       time: 'Evening',
+//     },
+//     {
+//       id: "5",
+//       day: 'Fri',
+//       img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/cloudy-night.svg',
+//       imgAlt: 'moon overcast by clouds icon',
+//       condition: 'cloudy',
+//       time: 'Night',
+//     }
+//   ]);
+
+//   const [activities, setActivities] = useState([]);
+
+//   function addWeather() {
+//     const newWeather = {
+//       id: Date.now().toString(),
+//       day: 'Sat',
+//       img: 'https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/day.svg',
+//       imgAlt: 'sun icon',
+//       condition: 'sunny',
+//       time: 'Morning'
+//     };
+//     setWeatherData([...weatherData, newWeather]);
+//   }
+
+//   function updateWeather(id, condition) {
+//     const updatedWeather = weatherData.map((w) => {
+//       if (w.id === id) {
+//         return { ...w, condition };
+//       }
+//       return w;
+//     });
+//     setWeatherData(updatedWeather);
+//   }
+
+//   function deleteWeather(id) {
+//     const filteredWeather = weatherData.filter(w => w.id !== id);
+//     setWeatherData(filteredWeather);
+//   }
+
+//   function addActivity(activity) {
+//     setActivities([...activities, activity]);
+//   }
+
+//   return (
+//     <div className="app-container">
+//       <h1>Local Weather</h1>
+
+//       <section className="weather-section">
+//         <h2>Forecast</h2>
+//         <ul>
+//           {weatherData.map((item) => (
+//             <WeatherForecast key={item.id} weather={item} />
+//           ))}
+//         </ul>
+
+//         <div className="weather-buttons">
+//           <button onClick={addWeather}>Add Weather</button>
+//           <button onClick={() => updateWeather("2", "Sunny")}>Update Weather</button>
+//           <button onClick={() => deleteWeather("5")}>Delete Weather</button>
+//         </div>
+//       </section>
+
+//       <section className="activity-section">
+//         <h2>Activities</h2>
+//         <ul>
+//           {activities.map((act, index) => (
+//             <li key={index}>{act}</li>
+//           ))}
+//         </ul>
+
+//         <ActivityForm onAddActivity={addActivity} />
+//       </section>
+//     </div>
+//   );
+// }
+
+// export default App;

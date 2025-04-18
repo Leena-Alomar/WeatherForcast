@@ -1,0 +1,61 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('/weath.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  color: rgb(41, 40, 40);
+}
+.weather-div{
+  margin-left: 225px;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 370;
+}
+
+.weather-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.activity-form-section,
+.activity-list {
+  width: 300px;
+  height: 55px;
+  margin: 20px auto;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);        
+  -webkit-backdrop-filter: blur(4px); 
+
+}
+#add{
+  margin-top: 70px;
+}
+.activity-form-section h2,
+.activity-list h2 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 350;
+}
+
+.activity-list ul {
+  padding-left: 20px;
+}
